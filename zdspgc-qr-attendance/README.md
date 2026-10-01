@@ -345,7 +345,8 @@ zdspgc-qr-attendance/
 │   ├── css/style.css       All styling + printable QR card styles
 │   ├── img/
 │   │   ├── logo.png          ZDSPGC seal (from seal-source.jpg, background made transparent)
-│   │   ├── login-bg-vicenzo-sagun.png  Login background photo used by the login page
+│   │   ├── login-bg-vicenzo-sagun.jpg  Login background photo used by the login page
+│   │   ├── login-bg-vicenzo-sagun.png  Earlier login background (kept as reference)
 │   │   ├── login-bg-vicenzo-sagun.svg  Vicenzo Sagun landscape (vector, alternate background)
 │   │   ├── login-bg.jpg      Earlier login background (kept as reference)
 │   │   └── seal-source.jpg   Original seal artwork (reference copy)
