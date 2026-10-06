@@ -1,0 +1,10 @@
+# Machine-specific database credentials — never commit.
+config/database.local.php
+
+# Auto-generated database backups
+database/backups/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log

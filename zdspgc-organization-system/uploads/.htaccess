@@ -1,0 +1,7 @@
+# Uploaded images (profile pictures, organization logos, event banners).
+# Images only — never execute scripts from this folder.
+Options -Indexes
+
+<FilesMatch "\.(?i:php|phtml|phar|cgi|pl|py|sh|html|htm|js)$">
+  Require all denied
+</FilesMatch>

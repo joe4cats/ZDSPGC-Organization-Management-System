@@ -1,0 +1,5 @@
+# Images only — never execute scripts in this folder.
+Options -Indexes
+<FilesMatch "\.(?i:php|phtml|phar|cgi|pl|py|sh|html|htm)$">
+  Require all denied
+</FilesMatch>

@@ -1,0 +1,4 @@
+# Private organization documents.
+# These files are never served directly: download.php checks the sign-in, the
+# role and the ownership of the document before streaming a file.
+Require all denied

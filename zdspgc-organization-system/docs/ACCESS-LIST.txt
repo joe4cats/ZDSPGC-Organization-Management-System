@@ -1,0 +1,114 @@
+ZDSPGC ORGANIZATION MANAGEMENT SYSTEM
+EXISTING DATA AND ACCESS LIST
+Plain text version - no slashes
+Data verified from the live database: October 7, 2026
+
+
+HOW TO SIGN IN
+-------------
+Open the browser and go to 127.0.0.1 on HTTP port 8080,
+then open the page "login.php".
+The sign-in field accepts a username, an e-mail address,
+or a Student ID.
+
+
+ACCOUNTS (5)
+------------
+1. sysadmin
+   Password: AdminPass@2026
+   Role: Administrator (Office of Student Affairs)
+   Opens: Admin Dashboard
+
+2. adviser.test
+   Password: AdviserPass@2026
+   Role: Faculty Adviser, handles ZDSPGC Computing Society
+   Opens: Adviser Dashboard
+
+3. msarmiento
+   Password: AdviserPass@2026
+   Role: Faculty Adviser, handles SITE and SSC
+   Opens: Adviser Dashboard
+
+4. 2026-00001
+   Password: StudentPass@2026
+   Role: Organization Officer
+   Name: Juan Dela Cruz, President of Computing Society
+   Opens: Officer Portal
+
+5. 2026-00503
+   Password: StudentPass@2026
+   Role: Student
+   Name: Kyle Alejo
+   Opens: Student Portal
+
+Note: account 4 was promoted from student to officer,
+so it still uses the student password.
+
+Public pages that need no sign-in: the landing page,
+the organization directory, and the organization profiles.
+
+
+ORGANIZATIONS (3, all active)
+-----------------------------
+1. ZDSPGC Computing Society (CS) - adviser: adviser.test
+2. SITE - adviser: msarmiento
+3. SSC - adviser: msarmiento
+
+
+EVENTS (3, all approved)
+------------------------
+1. Tech Innovation Assembly - October 10, 2026 - by CS
+2. TechTalk 2026: Artificial Intelligence in Public Service
+   - October 15, 2026 - by SITE
+3. Leadership Summit 2026 - October 25, 2026 - by SSC
+
+
+ACADEMIC YEARS
+--------------
+2024-2025 - closed
+2025-2026 - closed
+2026-2027 - active (current)
+2027-2028 - upcoming
+
+
+DEPARTMENTS (5)
+---------------
+- College of Information and Computing Studies
+- College of Business Administration
+- College of Teacher Education
+- College of Arts and Sciences
+- College of Engineering
+
+
+RECORD COUNTS
+-------------
+students ................ 2 (Juan Dela Cruz, Kyle Alejo)
+users ................... 5 (see accounts above)
+advisers ................ 2
+organization members .... 2 (Juan and Kyle, both active in CS)
+organization officers ... 1 (Juan, CS, active)
+events .................. 3
+event registrations ..... 1 (Kyle registered for TechTalk 2026)
+attendance .............. 1 (Juan, present at Tech Innovation Assembly,
+                            recorded by event QR scan)
+check-in requests ....... 0 (feature ready, none pending)
+announcements ........... 2
+notifications ........... 7 (Juan has 3, Kyle has 4, of which 4 unread)
+activity log entries .... 92 (full audit trail)
+
+
+QUICK DEMO PATHS
+----------------
+Admin sign-in (sysadmin):
+   approve organizations and events, open reports and audit log.
+
+Adviser sign-in (adviser.test):
+   endorse events, view attendance, use Import Students for CSV files.
+
+Officer sign-in (2026-00001):
+   manage the Computing Society, create events, generate the QR poster,
+   approve check-in requests.
+
+Student sign-in (2026-00503):
+   register for events, scan the QR code or request a check-in,
+   read announcements.

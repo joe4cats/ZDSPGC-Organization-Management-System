@@ -1,0 +1,47 @@
+# =============================================================================
+#  ZDSPGC Organization Management System — Apache configuration
+#  Only needed when the app is served with Apache (XAMPP / WAMP / cPanel).
+# =============================================================================
+
+DirectoryIndex index.php
+
+# ---- never expose internals -------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Class files, configuration and the SQL files are only loaded by PHP
+  RewriteRule ^includes/ - [F,L]
+  RewriteRule ^config/  - [F,L]
+  RewriteRule ^database/ - [F,L]
+
+  # Uploaded documents are private: served only through download.php
+  RewriteRule ^uploads/(documents|reports)/ - [F,L]
+
+  # Hidden folders such as .git
+  RewriteRule (^|/)\.(?!well-known) - [F,L]
+</IfModule>
+
+# ---- fallback for hosts without mod_rewrite ---------------------------------
+<FilesMatch "\.(sql|log|ini|md)$">
+  Require all denied
+</FilesMatch>
+
+# ---- installer is only needed once ------------------------------------------
+<Files "install.php">
+  # Set DEMO_MODE to false in config/config.php (or delete this file) to lock the
+  # installer behind an administrator sign-in.
+</Files>
+
+# ---- security headers -------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=()"
+</IfModule>
+
+Options -Indexes
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
